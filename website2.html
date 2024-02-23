@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="stylesheet" href="styles/index.css" />
+    <title>Document</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+        }
+ 
+        .container {
+            width: 100vw;
+            /* background-color: blue; */
+            display: flex;
+            flex-wrap: wrap;
+        }
+ 
+        .header {
+            height: 100px;
+            width: 100%;
+            /* border-bottom-left-radius: 25%;
+    border-bottom-right-radius: 25%; */
+            background-color: #0066ff;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+ 
+        .header-left {
+            height: 80%;
+            width: 20px;
+            padding-top: 8px;
+            padding-left: 15px;
+        }
+ 
+        .header-buttons {
+            margin-left: 50%;
+            margin-top: -50px;
+        }
+ 
+        .header-button-nature {
+            height: 40px;
+            border: none;
+            border-radius: 25%;
+            color: aliceblue;
+            background-color: #0066ff;
+        }
+ 
+        .header-button-nature:hover {
+            opacity: 90%;
+            background-color: hsl(207, 100%, 50%);
+        }
+ 
+        .signin-button {
+            background-color: #f70b0b;
+            color: aliceblue;
+            height: 40px;
+            width: 80px;
+            border: none;
+            border-radius: 35%;
+        }
+ 
+        .bhar {
+            width: 100%;
+            width: 100vw;
+            height: 700px;
+            border-bottom-left-radius: 35%;
+            border-bottom-right-radius: 35%;
+            /* background-color: pink; */
+            background-image: url(' https://templatemo.com/templates/templatemo_589_lugx_gaming/assets/images/banner-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: row;
+            align-items: flex-end;
+            justify-content: space-evenly;
+        }
+ 
+ 
+ 
+        .content {
+            top: 100px;
+            width: 100vw;
+            height: 700px;
+            border-bottom-left-radius: 35%;
+            border-bottom-right-radius: 35%;
+            /* background-color: pink; */
+            background-image: url(' https://templatemo.com/templates/templatemo_589_lugx_gaming/assets/images/banner-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: row;
+            align-items: flex-end;
+            justify-content: space-evenly;
+        }
+ 
+        .box {
+            width: 250px;
+            height: 200px;
+            margin-left: 120px;
+            margin-right: -100px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+            position: relative;
+            background-color: white;
+            top: 16%;
+            border-radius: 10%;
+            transform: translateX(-50%);
+            z-index: 1;
+ 
+        }
+ 
+        .material-icons {
+            color: rgb(100, 100, 100);
+            padding: 0 7px;
+            cursor: pointer;
+            margin-top: 25px;
+            margin-left: 25px;
+        }
+ 
+        .icon-background {
+            height: 40%;
+            width: 40%;
+            background-color: blue;
+            border-radius: 50%;
+            margin-top: 70px;
+            margin-left: 75px;
+        }
+ 
+        .icon-background:hover {
+            background-color: #f70b0b;
+        }
+ 
+        .icon-content {
+            height: 25px;
+            width: 100%;
+            margin-top: 10px;
+            margin-left: 70px;
+        }
+ 
+        .header-image {
+            position: absolute;
+            top: 10px;
+            left: 200px;
+            margin-left: 55%;
+            margin-top: 180px;
+            transform: translateX(-50%);
+            z-index: 1;
+        }
+ 
+        .below-header {
+            color: aliceblue;
+            position: absolute;
+            top: 10px;
+            left: 200px;
+            margin-left: 110px;
+            margin-top: 200px;
+            transform: translateX(-50%);
+            z-index: 1;
+        }
+ 
+        .search-container {
+            margin-top: 100px;
+            margin-left: 20px;
+        }
+ 
+        .search-button {
+            height: 50px;
+            width: 150px;
+            margin-left: -45px;
+            background-color: #f70b0b;
+            color: aliceblue;
+            border: none;
+            border-radius: 25px;
+        }
+ 
+        .search-button:hover {
+            background-color: blue;
+        }
+ 
+        .explore-div {
+            margin-top: 180px;
+            margin-left: 30px;
+        }
+ 
+        .after-explore {
+            height: 100px;
+            width: 100vw;
+            background-color: white;
+            margin-left: 30px;
+        }
+ 
+        .view-button {
+            height: 40px;
+            width: 80px;
+            margin-left: 1000px;
+            margin-top: -70px;
+            background-color: #f70b0b;
+            color: aliceblue;
+            border: none;
+            border-radius: 25px;
+            padding-top: 20px;
+            padding-left: 30px;
+            text-align: justify;
+        }
+ 
+        .view-button:hover {
+            background-color: blue;
+        }
+ 
+        .content2 {
+            height: 400px;
+            width: 100vw;
+            background-color: white;
+            display: flex;
+            flex-direction: row;
+            overflow-x: scroll;
+            gap: 40px;
+            margin-left: 30px;
+ 
+        }
+ 
+        .content2::-webkit-scrollbar {
+            display: none;
+        }
+ 
+        .box2 {
+            height: 300px;
+            width: 250px;
+            background-color: lightgrey;
+            /* border: 1px solid black; */
+            border-radius: 15px;
+        }
+ 
+        .box2-inside {
+            height: 200px;
+            width: 250px;
+            /* border: 1px solid black; */
+            border-radius: 15px;
+            /* background-image: url('https://templatemo.com/templates/templatemo_589_lugx_gaming/assets/images/trending-01.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat */
+        }
+ 
+        .action {
+            color: grey;
+            margin-top: 20px;
+            margin-left: 40px;
+        }
+ 
+        .action-creed {
+            color: black;
+            margin-top: -20px;
+            margin-left: 40px;
+        }
+ 
+        .ascr:hover {
+            color: blue;
+        }
+ 
+        .set {
+            height: 700px;
+            width: 100vw;
+            background-color: lightgrey;
+            border-radius: 120px;
+        }
+ 
+        .content3 {
+            height: 1200px;
+            width: 100vw;
+            background-color: lightgrey;
+            border-radius: 100px;
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            overflow-x: auto;
+            overflow-y: hidden;
+        }
+ 
+        .content3::-webkit-scrollbar {
+            display: none;
+        }
+ 
+        .box3 {
+            height: 300px;
+            width: 160px;
+            margin-left: 30px;
+            margin-top: 250px;
+            background-color: white;
+            /* border: 1px solid black; */
+            border-radius: 15px;
+        }
+ 
+        .box3-inside {
+            height: 200px;
+            width: 160px;
+            /* border: 1px solid black; */
+            border-radius: 15px;
+        }
+ 
+        .action-creed2 {
+            margin-left: 25px;
+            margin-top: 5px;
+        }
+ 
+        .top-games {
+            color: #f70b0b;
+            position: absolute;
+            margin-left: 110px;
+            margin-top: 40px;
+            transform: translateX(-50%);
+            z-index: 1;
+ 
+        }
+ 
+        .most-played {
+            color: black;
+            position: absolute;
+            margin-left: 150px;
+            margin-top: 100px;
+            transform: translateX(-50%);
+            z-index: 1;
+        }
+ 
+        .view-button2 {
+            height: 40px;
+            width: 80px;
+            margin-left: 1000px;
+            margin-top: 100px;
+            background-color: #f70b0b;
+            color: aliceblue;
+            border: none;
+            border-radius: 25px;
+            padding-top: 20px;
+            padding-left: 30px;
+            text-align: justify;
+            position: absolute;
+            z-index: 1;
+        }
+ 
+        .view-button2:hover {
+            background-color: blue;
+        }
+ 
+        .content4 {
+            height: 1000px;
+            width: 100vw;
+            margin-top: 2px;
+            background-color: white;
+            display: flex;
+            flex-direction: row;
+            gap: -110px;
+            overflow-x: auto;
+            overflow-y: hidden;
+        }
+ 
+        .box4 {
+            height: 250px;
+            width: 200px;
+            margin-left: 30px;
+            margin-top: 250px;
+            background-color: blue;
+            /* border: 1px solid black; */
+            border-radius: 15px;
+        }
+ 
+        .box4-inside {
+            height: 200px;
+            width: 200px;
+            margin-top: 50px;
+            /* border: 1px solid black; */
+            border-radius: 15px;
+        }
+ 
+        .categories {
+            color: #f70b0b;
+            position: absolute;
+            margin-left: 600px;
+            margin-top: 40px;
+            transform: translateX(-50%);
+            z-index: 1;
+        }
+ 
+        .below-categories {
+            position: absolute;
+            margin-left: 600px;
+            margin-top: 100px;
+            transform: translateX(-50%);
+            z-index: 1;
+        }
+ 
+        .action2 {
+            margin-left: 115px;
+            margin-top: 30px;
+            color: aliceblue;
+            position: relative;
+            transform: translateX(-50%);
+            z-index: 1;
+        }
+ 
+        .footer {
+            height: 100px;
+            width: 100vw;
+            margin-top: 100px;
+            background-color: blue;
+            border-top-left-radius: 50px;
+            border-top-right-radius: 50px;
+        }
+ 
+        .footer-p {
+            color: aliceblue;
+            text-align: center;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+ 
+        .footer-a {
+            color: aliceblue;
+            text-decoration: none;
+        }
+ 
+        .footer-a:hover {
+            opacity: 90%;
+        }
+ 
+        @media (max-width: 1024px) {
+            .header-buttons {
+                margin-left: 45%;
+                margin-top: -50px;
+            }
+ 
+            .header-image {
+                margin-left: 600px;
+            }
+ 
+            .view-button {
+                margin-left: 80%;
+            }
+ 
+            .view-button2 {
+                margin-left: 85%;
+            }
+        }
+ 
+        @media (max-width: 768px) {
+            .header-buttons {
+                margin-left: 25%;
+            }
+ 
+            .below-header {
+                left: 180px;
+            }
+ 
+            .header-image {
+                /* margin-left:390px ; */
+                display: none;
+            }
+ 
+            .material-icons {
+                margin-left: 15px;
+            }
+ 
+            .icon-background {
+                margin-left: 55px;
+            }
+ 
+            .icon-content {
+                margin-left: 20px;
+            }
+ 
+            .categories {
+                margin-left: 50%;
+            }
+ 
+            .below-categories {
+                margin-left: 50%;
+            }
+        }
+ 
+        @media screen and (min-width: 400px) and (max-width: 767px) {
+        .header-buttons {
+            display: none;
+        }
+        .search-container {
+            margin-top: 5%;
+            margin-left: -30%;
+        }
+        .view-button{
+            margin-left: 70%;
+        }
+        .most-played{
+            margin-left: 5%;
+        }
+        .view-button2{
+            margin-left: 70%;
+        }
+            .below-header {
+                margin-left: 10%;
+                text-align: center;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+            }
+            .search-container{
+                margin-left: 10%;
+            }
+            .search-button{
+                margin-left: 10%;
+            }
+ 
+            .bhar {
+                display: flex;
+                flex-wrap: wrap;
+            }
+ 
+            .content {
+ 
+                width: 100%;
+                height: auto;
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+                padding-bottom: 20px;
+                margin-top: 500px;
+            }.explore-div{
+                margin-top: 900px;
+            }
+            .bhar2 {
+ 
+                display: flex;
+                flex-wrap: wrap;
+            }
+ 
+            .box {
+                margin-bottom: 10px;
+              
+            }
+            /* .below-header {
+                display: flex;
+                justify-content: left;
+            } */
+            .content2{
+                height: 500px;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .box2{
+                margin-top: 50px;
+            }
+            .content3{
+                /* display: flex;
+                flex-wrap: wrap; */
+                justify-content: center;
+               margin-top: 50px;
+             height: fit-content;
+            }
+            .content4{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                margin-top: 100px;
+            }
+        }
+    </style>
+</head>
+ 
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header-left">
+                <img src="https://templatemo.com/templates/templatemo_589_lugx_gaming/assets/images/logo.png">
+            </div>
+            <div class="header-buttons">
+                <button class="header-button-nature">Home</button>&nbsp; &nbsp; &nbsp; &nbsp;
+                <button class="header-button-nature">Our Shop</button> &nbsp; &nbsp; &nbsp; &nbsp;
+                <button class="header-button-nature">Product Details</button> &nbsp; &nbsp; &nbsp; &nbsp;
+                <button class="header-button-nature">Contact Us</button> &nbsp; &nbsp; &nbsp; &nbsp;
+                <button class="signin-button">SIN IN</button>
+            </div>
+        </div>
+        <div class="bhar">
+            <div class="below-header">
+                <h4>WELCOME TO LUGX</h4>
+                <h1> BEST GAMING SITE <br> EVER</h1>
+                <p>LUGX Gaming is free bootstrap 5 HTML CSS Website template for your gaming<br>
+                    websites. You can download and use this layout for commersial purposes.<br>
+                    please tell your friends about TemplateMO.
+                </p>
+                <div class="search-container">
+                    <input type="text" class="search-input" placeholder="Type Something......"
+                        style="height: 50px;width: 300px; border: none; border-radius: 25px; ">
+                    <button type="submit" class="search-button">Search Now</button>
+                </div>
+ 
+            </div>
+            <div class="header-image">
+                <img src="https://templatemo.com/templates/templatemo_589_lugx_gaming/assets/images/banner-image.jpg"
+                    style="height: 450px;width: 350px;border-radius: 10%;" alt="Image" />
+            </div>
+ 
+            <div class="bhar2">
+                <div class="content">
+                    <div class="box">
+                        <div class="icon-background">
+                            <div class="material-icons"> <i>cloud_download</i><br></div>
+                        </div>
+                        <div class="icon-content"><b>FREE STORAGE</b></div>
+                    </div>
+                    <div class="box">
+                        <div class="icon-background">
+                            <div class="material-icons"> <i>account_circle</i><br></div>
+                        </div>
+                        <div class="icon-content"><b>USER MORE</b></div>
+                    </div>
+                    <div class="box">
+                        <div class="icon-background">
+                            <div class="material-icons"> <i>settings_backup_restore</i><br></div>
+                        </div>
+                        <div class="icon-content"><b>REPLY READY</b></div>
+                    </div>
+                    <div class="box">
+                        <div class="icon-background">
+                            <div class="material-icons"> <i>table</i><br></div>
+                        </div>
+                        <div class="icon-content"><b>EASY LAYOUT</b></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+ 
+ 
+        <div class="explore-div"><b style="color: red;background-color: white;margin-top: 100px;">TRENDING</b></div>
+        <div class="after-explore">
+            <h1><b>Trending Games</b></h1>
+            <div class="view-button">View All</div>
+        </div>
+        <div class="content2">
+            <div class="box2">
+                <div class="box2-inside">
+                    <img src="https://templatemo.com/templates/templatemo_589_lugx_gaming/assets/images/trending-01.jpg"
+                        style="height:200px ;width: 250px;border-radius: 15px;">
+                </div>
+                <div class="action">action</div>
+                <div class="action-creed"><b class="ascr">Assain Creed</b>
+                    <div class="material-icons"> <i>local_mall</i><br></div>
+                </div>
+ 
+            </div>
+            <div class="box2">
+                <div class="box2-inside">
+                    <img src="https://templatemo.com/templates/templatemo_589_lugx_gaming/assets/images/trending-01.jpg"
+                        style="height:200px ;width: 250px;border-radius: 15px;">
+                </div>
+                <div class="action">action</div>
+                <div class="action-creed"><b class="ascr">Assain Creed</b>
+                    <div class="material-icons"> <i>local_mall</i><br></div>
+                </div>
+ 
+            </div>
+            <div class="box2">
+                <div class="box2-inside">
+                    <img src="https://templatemo.com/templates/templatemo_589_lugx_gaming/assets/images/trending-02.jpg"
+                        style="height:200px ;width: 250px;border-radius: 15px;">
+                </div>
+                <div class="action">action</div>
+                <div class="action-creed"><b class="ascr">Assain Creed</b>
+                    <div class="material-icons"> <i>local_mall</i><br></div>
+                </div>
+            </div>
+            <div class="box2">
+                <div class="box2-inside">
+                    <img src="https://templatemo.com/templates/templatemo_589_lugx_gaming/assets/images/trending-03.jpg"
+                        style="height:200px ;width: 250px;border-radius: 15px;">
+                </div>
+                <div class="action">action</div>
+                <div class="action-creed"><b class="ascr">Assain Creed</b>
+                    <div class="material-icons"> <i>local_mall</i><br></div>
+                </div>
+            </div>
+            <div class="box2">
+                <div class="box2-inside">
+                    <img src="https://templatemo.com/templates/templatemo_589_lugx_gaming/assets/images/trending-04.jpg"
+                        style="height:200px ;width: 250px;border-radius: 15px;">
+                </div>
+                <div class="action">action</div>
+                <div class="action-creed"><b class="ascr">Assain Creed</b>
+                    <div class="material-icons"> <i>local_mall</i><br></div>
+                </div>
+            </div>
+ 
+        </div>
+        <div class="content3">
+            <div Class="top-games">
+                <h4><B>TOP GAMES</B></h4>
+            </div>
+            <div class="most-played">
+                <h1><b>Most Played</b></h1>
+            </div>
+            <div class="view-button2">View All</div>
+            <!-- <button class="view-button2" style="background-color: #f70b0b; transform: translateX(-50%);position: absolute;z-index: 1; border: none;height: 40px;width: 100px; color: aliceblue; margin-left: 1000px;margin-top: 120px;border-radius: 25px;">View All</button> -->
+            <div class="box3">
+                <div class="3-inside">
+                    <img src="https://templatemo.com/templates/templatemo_589_lugx_gaming/assets/images/top-game-01.jpg"
+                        style="height:200px ;width: 160px;border-radius: 15px;">
+                </div>
+                <div class="action">Adventure</div>
+                <div class="action-creed2"><b class="ascr">Assain Creed</b></div>
+                <button class="explore"
+                    style="background-color: #f70b0b; border: none;height: 30px;width: 100px; color: aliceblue; margin-left: 30px;margin-top: 20px;border-radius: 25px;"><b>EXPLORE</b></button>
+            </div>
+            <div class="box3">
+                <div class="3-inside">
+                    <img src="https://templatemo.com/templates/templatemo_589_lugx_gaming/assets/images/top-game-01.jpg"
+                        style="height:200px ;width: 160px;border-radius: 15px;">
+                </div>
+                <div class="action">Adventure</div>
+                <div class="action-creed2"><b class="ascr">Assain Creed</b></div>
+                <button class="explore"
+                    style="background-color: #f70b0b; border: none;height: 30px;width: 100px; color: aliceblue; margin-left: 30px;margin-top: 20px;border-radius: 25px;"><b>EXPLORE</b></button>
+            </div>
+            <div class="box3">
+                <div class="3-inside">
+                    <img src="https://templatemo.com/templates/templatemo_589_lugx_gaming/assets/images/top-game-02.jpg"
+                        style="height:200px ;width: 160px;border-radius: 15px;">
+                </div>
+                <div class="action">Adventure</div>
+                <div class="action-creed2"><b class="ascr">Assain Creed</b></div>
+                <button class="explore"
+                    style="background-color: #f70b0b;border: none;height: 30px;width: 100px; color: aliceblue; margin-left: 30px;margin-top: 20px;border-radius: 25px;"><b>EXPLORE</b></button>
+            </div>
+            <div class="box3">
+                <div class="3-inside">
+                    <img src="https://templatemo.com/templates/templatemo_589_lugx_gaming/assets/images/top-game-03.jpg"
+                        style="height:200px ;width: 160px;border-radius: 15px;">
+                </div>
+                <div class="action">Adventure</div>
+                <div class="action-creed2"><b class="ascr">Assain Creed</b></div>
+                <button class="explore"
+                    style="background-color: #f70b0b;border: none;height: 30px;width: 100px; color: aliceblue; margin-left: 30px;margin-top: 20px;border-radius: 25px;"><b>EXPLORE</b></button>
+            </div>
+            <div class="box3">
+                <div class="3-inside">
+                    <img src="https://templatemo.com/templates/templatemo_589_lugx_gaming/assets/images/top-game-04.jpg"
+                        style="height:200px ;width: 160px;border-radius: 15px;">
+                </div>
+                <div class="action">Adventure</div>
+                <div class="action-creed2"><b class="ascr">Assain Creed</b></div>
+                <button class="explore"
+                    style="background-color: #f70b0b;border: none;height: 30px;width: 100px; color: aliceblue; margin-left: 30px;margin-top: 20px;border-radius: 25px;"><b>EXPLORE</b></button>
+            </div>
+            <div class="box3">
+                <div class="3-inside">
+                    <img src="https://templatemo.com/templates/templatemo_589_lugx_gaming/assets/images/top-game-05.jpg"
+                        style="height:200px ;width: 160px;border-radius: 15px;">
+                </div>
+                <div class="action">Adventure</div>
+                <div class="action-creed2"><b class="ascr">Assain Creed</b></div>
+                <button class="explore"
+                    style="background-color: #f70b0b;border: none;height: 30px;width: 100px; color: aliceblue; margin-left: 30px;margin-top: 20px;border-radius: 25px;"><b>EXPLORE</b></button>
+            </div>
+            <div class="box3">
+                <div class="3-inside">
+                    <img src="https://templatemo.com/templates/templatemo_589_lugx_gaming/assets/images/top-game-06.jpg"
+                        style="height:200px ;width: 160px;border-radius: 15px;">
+                </div>
+                <div class="action">Adventure</div>
+                <div class="action-creed2"><b class="ascr">Assain Creed</b></div>
+                <button class="explore"
+                    style="background-color: #f70b0b;border: none;height: 30px;width: 100px; color: aliceblue; margin-left: 30px;margin-top: 20px;border-radius: 25px;"><b>EXPLORE</b></button>
+ 
+            </div>
+ 
+        </div>
+        <div class="content4">
+            <div class="categories">CATEGORIES</div>
+            <div class="below-categories">
+                <h1><b>Top Catogories</b></h1>
+            </div>
+            <div class="box4">
+                <div class="action2"><b>Action</b></div>
+                <div class="box4-inside">
+                    <img src="https://templatemo.com/templates/templatemo_589_lugx_gaming/assets/images/categories-01.jpg"
+                        style="height:150px ;width: 200px;border-radius: 15px;">
+                </div>
+            </div>
+            <div class="box4">
+                <div class="action2"><b>Action</b></div>
+                <div class="box4-inside">
+                    <img src="https://templatemo.com/templates/templatemo_589_lugx_gaming/assets/images/categories-05.jpg"
+                        style="height:150px ;width: 200px;border-radius: 15px;">
+                </div>
+            </div>
+            <div class="box4">
+                <div class="action2"><b>Action</b></div>
+                <div class="box4-inside">
+                    <img src="https://templatemo.com/templates/templatemo_589_lugx_gaming/assets/images/categories-03.jpg"
+                        style="height:150px ;width: 200px;border-radius: 15px;">
+                </div>
+            </div>
+            <div class="box4">
+                <div class="action2"><b>Action</b></div>
+                <div class="box4-inside">
+                    <img src="https://templatemo.com/templates/templatemo_589_lugx_gaming/assets/images/categories-04.jpg"
+                        style="height:150px ;width: 200px;border-radius: 15px;">
+                </div>
+            </div>
+            <div class="box4">
+                <div class="action2"><b>Action</b></div>
+                <div class="box4-inside">
+                    <img src="https://templatemo.com/templates/templatemo_589_lugx_gaming/assets/images/categories-05.jpg"
+                        style="height:150px ;width: 200px;border-radius: 15px;">
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <p class="footer-p">Copyright © 2048 LUGX Gaming Company. All rights reserved. <a
+                    href="https://templatemo.com/" class="footer-a">Design: TemplateMo</a></p>
+        </div>
+    </div>
+ 
+</body>
+ 
+</html>
