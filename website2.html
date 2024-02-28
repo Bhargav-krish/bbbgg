@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
  
 <head>
@@ -13,7 +12,6 @@
             font-family: 'Roboto', sans-serif;
             margin: 0;
         }
- 
         .container {
             width: 100vw;
             /* background-color: blue; */
@@ -24,8 +22,6 @@
         .header {
             height: 100px;
             width: 100%;
-            /* border-bottom-left-radius: 25%;
-    border-bottom-right-radius: 25%; */
             background-color: #0066ff;
             position: sticky;
             top: 0;
@@ -65,14 +61,12 @@
             border: none;
             border-radius: 35%;
         }
- 
         .bhar {
             width: 100%;
             width: 100vw;
             height: 700px;
-            border-bottom-left-radius: 35%;
             border-bottom-right-radius: 35%;
-            /* background-color: pink; */
+            border-bottom-left-radius: 35%;
             background-image: url(' https://templatemo.com/templates/templatemo_589_lugx_gaming/assets/images/banner-bg.jpg');
             background-size: cover;
             background-position: center;
@@ -81,9 +75,6 @@
             align-items: flex-end;
             justify-content: space-evenly;
         }
- 
- 
- 
         .content {
             top: 100px;
             width: 100vw;
@@ -99,7 +90,6 @@
             align-items: flex-end;
             justify-content: space-evenly;
         }
- 
         .box {
             width: 250px;
             height: 200px;
@@ -112,11 +102,11 @@
             border-radius: 10%;
             transform: translateX(-50%);
             z-index: 1;
- 
+
         }
  
         .material-icons {
-            color: rgb(100, 100, 100);
+            color: black;
             padding: 0 7px;
             cursor: pointer;
             margin-top: 25px;
@@ -222,7 +212,6 @@
             overflow-x: scroll;
             gap: 40px;
             margin-left: 30px;
- 
         }
  
         .content2::-webkit-scrollbar {
@@ -232,20 +221,14 @@
         .box2 {
             height: 300px;
             width: 250px;
-            background-color: lightgrey;
-            /* border: 1px solid black; */
+            background-color:#f8f9fa;
             border-radius: 15px;
         }
  
         .box2-inside {
             height: 200px;
             width: 250px;
-            /* border: 1px solid black; */
             border-radius: 15px;
-            /* background-image: url('https://templatemo.com/templates/templatemo_589_lugx_gaming/assets/images/trending-01.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat */
         }
  
         .action {
@@ -267,14 +250,14 @@
         .set {
             height: 700px;
             width: 100vw;
-            background-color: lightgrey;
+            background-color: #f8f9fa;
             border-radius: 120px;
         }
  
         .content3 {
-            height: 1200px;
+            height: 600px;
             width: 100vw;
-            background-color: lightgrey;
+            background-color: #f8f9fa;
             border-radius: 100px;
             display: flex;
             flex-direction: row;
@@ -293,7 +276,6 @@
             margin-left: 30px;
             margin-top: 250px;
             background-color: white;
-            /* border: 1px solid black; */
             border-radius: 15px;
         }
  
@@ -349,24 +331,21 @@
         }
  
         .content4 {
-            height: 1000px;
             width: 100vw;
             margin-top: 2px;
             background-color: white;
+            margin: 0;
             display: flex;
-            flex-direction: row;
-            gap: -110px;
-            overflow-x: auto;
-            overflow-y: hidden;
+            /* gap: -110px; */
+            justify-content: center;
         }
  
         .box4 {
             height: 250px;
             width: 200px;
-            margin-left: 30px;
+            margin-left: 25px;
             margin-top: 250px;
             background-color: blue;
-            /* border: 1px solid black; */
             border-radius: 15px;
         }
  
@@ -374,14 +353,13 @@
             height: 200px;
             width: 200px;
             margin-top: 50px;
-            /* border: 1px solid black; */
             border-radius: 15px;
         }
- 
+
         .categories {
             color: #f70b0b;
             position: absolute;
-            margin-left: 600px;
+            align-content: center;
             margin-top: 40px;
             transform: translateX(-50%);
             z-index: 1;
@@ -389,7 +367,7 @@
  
         .below-categories {
             position: absolute;
-            margin-left: 600px;
+            margin-left: 120px;
             margin-top: 100px;
             transform: translateX(-50%);
             z-index: 1;
@@ -555,6 +533,104 @@
             .box2{
                 margin-top: 50px;
             }
+            .categories{
+               margin-left: 10%;
+            }
+            .below-categories{
+                margin-left: 40%;
+            }
+            .content3{
+                /* display: flex;
+                flex-wrap: wrap; */
+                justify-content: center;
+               margin-top: 50px;
+             height: fit-content;
+            }
+            .content4{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                margin-top: 100px;
+            }
+        }
+        @media screen and (min-width: 0px) and (max-width: 399px) {
+        .header-buttons {
+            display: none;
+        }
+        .search-container {
+            margin-top: 5%;
+            margin-left: -30%;
+        }
+        .view-button{
+            margin-left: 70%;
+        }
+        .most-played{
+            margin-left: 5%;
+        }
+        .view-button2{
+            margin-left: 70%;
+        }
+            .below-header {
+                margin-left: 10%;
+                text-align: center;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+            }
+            .search-container{
+                margin-left: 10%;
+            }
+            .search-button{
+                margin-left: 10%;
+            }
+ 
+            .bhar {
+                display: flex;
+                flex-wrap: wrap;
+            }
+ 
+            .content {
+ 
+                width: 100%;
+                height: auto;
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+                padding-bottom: 20px;
+                margin-top: 500px;
+            }.explore-div{
+                margin-top: 900px;
+            }
+            .bhar2 {
+ 
+                display: flex;
+                flex-wrap: wrap;
+            }
+ 
+            .box {
+                margin-bottom: 10px;
+              
+            }
+            /* .below-header {
+                display: flex;
+                justify-content: left;
+            } */
+            .content2{
+                height: 500px;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .box2{
+                margin-top: 50px;
+            }
+            .categories{
+               margin-left: 10%;
+            }
+            .below-categories{
+                margin-left: 40%;
+            }
             .content3{
                 /* display: flex;
                 flex-wrap: wrap; */
@@ -576,7 +652,8 @@
     <div class="container">
         <div class="header">
             <div class="header-left">
-                <img src="https://templatemo.com/templates/templatemo_589_lugx_gaming/assets/images/logo.png">
+                <!-- <img src="https://templatemo.com/templates/templatemo_589_lugx_gaming/assets/images/logo.png"> -->
+                <h1 style="color: aliceblue;">games</h1>
             </div>
             <div class="header-buttons">
                 <button class="header-button-nature">Home</button>&nbsp; &nbsp; &nbsp; &nbsp;
@@ -610,25 +687,25 @@
                 <div class="content">
                     <div class="box">
                         <div class="icon-background">
-                            <div class="material-icons"> <i>cloud_download</i><br></div>
+                            <div class="material-icons"> <b>cloud_download</b><br></div>
                         </div>
                         <div class="icon-content"><b>FREE STORAGE</b></div>
                     </div>
                     <div class="box">
                         <div class="icon-background">
-                            <div class="material-icons"> <i>account_circle</i><br></div>
+                            <div class="material-icons"> <b>account_circle</b><br></div>
                         </div>
                         <div class="icon-content"><b>USER MORE</b></div>
                     </div>
                     <div class="box">
                         <div class="icon-background">
-                            <div class="material-icons"> <i>settings_backup_restore</i><br></div>
+                            <div class="material-icons"> <b>settings_backup_restore</b><br></div>
                         </div>
                         <div class="icon-content"><b>REPLY READY</b></div>
                     </div>
                     <div class="box">
                         <div class="icon-background">
-                            <div class="material-icons"> <i>table</i><br></div>
+                            <div class="material-icons"> <b>table</b><br></div>
                         </div>
                         <div class="icon-content"><b>EASY LAYOUT</b></div>
                     </div>
@@ -650,7 +727,7 @@
                 </div>
                 <div class="action">action</div>
                 <div class="action-creed"><b class="ascr">Assain Creed</b>
-                    <div class="material-icons"> <i>local_mall</i><br></div>
+                    <div class="material-icons"> <b>local_mall</b><br></div>
                 </div>
  
             </div>
@@ -661,7 +738,7 @@
                 </div>
                 <div class="action">action</div>
                 <div class="action-creed"><b class="ascr">Assain Creed</b>
-                    <div class="material-icons"> <i>local_mall</i><br></div>
+                    <div class="material-icons"> <b>local_mall</b><br></div>
                 </div>
  
             </div>
@@ -672,7 +749,7 @@
                 </div>
                 <div class="action">action</div>
                 <div class="action-creed"><b class="ascr">Assain Creed</b>
-                    <div class="material-icons"> <i>local_mall</i><br></div>
+                    <div class="material-icons"><b>local_mall</b><br></div>
                 </div>
             </div>
             <div class="box2">
@@ -682,7 +759,7 @@
                 </div>
                 <div class="action">action</div>
                 <div class="action-creed"><b class="ascr">Assain Creed</b>
-                    <div class="material-icons"> <i>local_mall</i><br></div>
+                    <div class="material-icons"> <b>local_mall</b><br></div>
                 </div>
             </div>
             <div class="box2">
@@ -692,10 +769,10 @@
                 </div>
                 <div class="action">action</div>
                 <div class="action-creed"><b class="ascr">Assain Creed</b>
-                    <div class="material-icons"> <i>local_mall</i><br></div>
+                    <div class="material-icons"> <b>local_mall</b><br></div>
                 </div>
             </div>
- 
+
         </div>
         <div class="content3">
             <div Class="top-games">
@@ -821,8 +898,8 @@
             </div>
         </div>
         <div class="footer">
-            <p class="footer-p">Copyright © 2048 LUGX Gaming Company. All rights reserved. <a
-                    href="https://templatemo.com/" class="footer-a">Design: TemplateMo</a></p>
+            <p class="footer-p">Copyright © 2050 games Gaming Company. All rights reserved. <a
+                    href="--" class="footer-a">Design: TemplateDo</a></p>
         </div>
     </div>
  
